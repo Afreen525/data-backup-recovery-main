@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backup & Recovery System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts for a professional look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Data Backup & Recovery</h1>
+      <p>Your reliable backup solution</p>
+    </header>
+
+    <main>
+      <div class="layout">
+        <!-- Left Column: Backup All & Recover -->
+        <div class="left-col">
+          <section class="card backup">
+            <h2>Backup Files</h2>
+            <p>Backup all local files to Dropbox.</p>
+            <button id="backupBtn" class="btn primary">Backup All Files</button>
+            <p id="backupStatus" class="status"></p>
+          </section>
+          <section class="card recover">
+            <h2>Recover File</h2>
+            <p>Enter file name to recover from Dropbox.</p>
+            <input
+              type="text"
+              id="recoverFileName"
+              placeholder="e.g., example.txt"
+            />
+            <button id="recoverBtn" class="btn secondary">Recover File</button>
+            <p id="recoverStatus" class="status"></p>
+          </section>
+        </div>
+
+        <!-- Middle Column: Backed-Up Files (from Dropbox) -->
+        <div class="middle-col">
+          <section class="card list">
+            <h2>Backed-Up Files</h2>
+            <button id="listBtn" class="btn primary">
+              Refresh Backup List
+            </button>
+            <ul id="filesList" class="file-list"></ul>
+          </section>
+        </div>
+
+        <!-- Right Column: Local Files -->
+        <div class="right-col">
+          <section class="card local">
+            <h2>Local Files</h2>
+            <button id="localListBtn" class="btn primary">
+              Refresh Local File List
+            </button>
+            <ul id="localFilesList" class="file-list"></ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Dotaizz. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="main.js"></script>
+  </body>
+</html>
